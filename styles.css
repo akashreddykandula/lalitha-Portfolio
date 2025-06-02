@@ -1,0 +1,102 @@
+/* Custom styles for navbar mobile toggle */
+.nav-open {
+  transform: translateX(0) !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+     font-family: "Comic Relief", system-ui;
+}
+/* Box completing hover effect */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  transition: all 0.3s ease;
+}
+
+.nav-link::before {
+  top: 0;
+  left: 0;
+}
+
+.nav-link::after {
+  bottom: 0;
+  right: 0;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link::before {
+  transition-delay: 0s;
+}
+
+.nav-link::after {
+  transition-delay: 0.15s;
+}
+
+.nav-link::after,
+.nav-link::before {
+  height: 2px;
+}
+
+.nav-link:hover {
+  color: #3b82f6; /* Tailwind blue-500 */
+}
+
+.progress-ring {
+  stroke-dasharray: 282.6;
+  stroke-dashoffset: 282.6;
+  transition: stroke-dashoffset 1s ease-out;
+}
+.progress-ring {
+  stroke-dasharray: 282.6;
+  stroke-dashoffset: 282.6;
+  transition: stroke-dashoffset 1s ease-out;
+}
+.skill-circle:hover .progress-ring {
+  stroke-dashoffset: var(--offset);
+}
+.counter {
+  transition: color 0.3s;
+}
+.tooltip {
+  position: relative;
+}
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #374151;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.875rem;
+}
+.group:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
